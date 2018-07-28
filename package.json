@@ -1,0 +1,23 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "React boilerplate - dockerised, linted and ready to test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/maxhilliard/react-boilerplate.git",
+  "keywords": [
+    "react",
+    "boilerplate",
+    "eslint",
+    "docker",
+    "nginx"
+  ],
+  "author": "Max Hilliard",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/maxhilliard/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/maxhilliard/react-boilerplate#readme"
+}
