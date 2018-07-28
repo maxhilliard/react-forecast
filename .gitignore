@@ -1,0 +1,5 @@
+# Bundled files
+_dist
+
+# IDE specific files
+.vscode
