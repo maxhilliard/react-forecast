@@ -3,3 +3,6 @@ _dist
 
 # IDE specific files
 .vscode
+
+# Logs
+*.log

@@ -1,15 +1,15 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-    template: "./src/index.html",
+    template: './src/index.html',
 });
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: './src/index.jsx',
     output: {
-        path: path.join(__dirname, "/_dist"),
-        filename: "index_bundle.js"
+        path: path.join(__dirname, '/_dist'),
+        filename: 'index_bundle.js',
     },
     devServer: {
         port: 9000,
@@ -20,15 +20,15 @@ module.exports = {
                 test: /\.js[x]?$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader"
+                    loader: 'babel-loader',
                 },
-            }
-        ]
+            },
+        ],
     },
     plugins: [
         HtmlWebpackPluginConfig,
     ],
     resolve: {
         extensions: ['.js', '.jsx'],
-    }
+    },
 };

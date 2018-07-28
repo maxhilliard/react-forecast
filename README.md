@@ -3,10 +3,11 @@ React boilerplate - dockerised, linted and ready to test
 
 ## To do list:
 
-- React setup
+- ~~React setup~~
 - Styles setup - modules?
 - Config setup
 - Test setup
 - Dockerise
-- Linting
+- ~~Linting~~
 - Webpack optimisation
+- Pre-commit/push hooks
