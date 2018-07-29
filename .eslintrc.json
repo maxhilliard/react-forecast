@@ -32,5 +32,10 @@
             "always"
         ],
         "react/jsx-indent": [ 2, 4 ]
+    },
+    "globals": {
+        "describe": true,
+        "it": true,
+        "expect": true
     }
 }
