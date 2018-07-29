@@ -4,7 +4,7 @@
   "description": "React boilerplate - dockerised, linted and ready to test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack-dev-server --mode development --hot",
     "build": "webpack --mode production",
     "lint": "eslint --ext .js,.jsx src/"
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/maxhilliard/react-boilerplate#readme",
   "devDependencies": {
     "babel-core": "6.26.3",
+    "babel-jest": "23.4.2",
     "babel-loader": "7.1.5",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
@@ -34,12 +35,22 @@
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "7.10.0",
     "html-webpack-plugin": "3.2.0",
+    "jest": "23.4.2",
+    "react-test-renderer": "16.4.1",
     "webpack": "4.16.3",
     "webpack-cli": "3.1.0",
     "webpack-dev-server": "3.1.5"
   },
   "dependencies": {
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-dom": "16.4.1"
+  },
+  "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
   }
 }

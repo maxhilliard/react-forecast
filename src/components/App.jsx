@@ -1,11 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const App = () => (
+const App = ({ headerContent }) => (
     <div>
         <h1>
-            Hello
+            {headerContent}
         </h1>
     </div>
 );
+
+App.propTypes = {
+    headerContent: PropTypes.string,
+};
+
+App.defaultProps = {
+    headerContent: '',
+};
 
 export default App;
