@@ -22,6 +22,22 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 },
+            }, {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader',
+                    }, {
+                        loader: 'css-loader',
+                        options: {
+                            importLoader: 1,
+                            modules: true,
+                            localIdentName: '[name]_[local]__[hash:base64:5]',
+                        },
+                    }, {
+                        loader: 'postcss-loader',
+                    },
+                ],
             },
         ],
     },
