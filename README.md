@@ -29,10 +29,12 @@ The production docker image serves the app with nginx running on alpine linux.
 - ~~Styles setup - modules?~~
 - Config setup
 - ~~Test setup~~
-- Dockerise
+- ~~Dockerise~~
 - ~~Linting~~
 - Prettier setup
 - Webpack optimisation
-- Pre-commit/push hooks
+- ~~Pre-commit/push hooks~~
 - Group non-application files together - internals dir etc.
-- Pre-push/commit hooks
+- Storybook?!
+- Coveralls
+- Spruce up readme
