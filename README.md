@@ -33,5 +33,8 @@ The production docker image serves the app with nginx running on alpine linux.
 - ~~Linting~~
 - Prettier setup
 - Webpack optimisation
-- Pre-commit/push hooks
+- ~~Pre-commit/push hooks~~
 - Group non-application files together - internals dir etc.
+- Storybook?!
+- Coveralls
+- Spruce up readme
