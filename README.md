@@ -7,7 +7,7 @@ React boilerplate - dockerised, linted and ready to test
 
 ## Dependencies
 
-`yarn` - although `npm` will suffices, it's strongly recommended that you use yarn for dependency management.
+`yarn` - although `npm` will suffice, it's strongly recommended that you use yarn for dependency management.
 `node 8/9/10`
 `docker`
 
