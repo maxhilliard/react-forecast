@@ -1,9 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: './src/index.html',
 });
+
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([{
+    from: './src/config/config.json', to: './',
+}]);
 
 module.exports = {
     entry: './src/index.jsx',
@@ -43,8 +48,12 @@ module.exports = {
     },
     plugins: [
         HtmlWebpackPluginConfig,
+        CopyWebpackPluginConfig,
     ],
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            Services: path.resolve(__dirname, 'src/services/'),
+        },
     },
 };

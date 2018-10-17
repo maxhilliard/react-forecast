@@ -1,22 +1,44 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 
-import styles from './app.css';
+import getConfig from '../config';
 
-const App = ({ headerContent }) => (
-    <div>
-        <h1 className={styles.heading}>
-            {headerContent}
-        </h1>
-    </div>
+const loadConfig = async () => {
+    const config = await getConfig();
+
+    window.config = config;
+};
+
+const Loaded = () => (
+    <h1>
+        Hello World
+    </h1>
+);
+const Loading = () => (
+    <h1>
+        Loading
+    </h1>
 );
 
-App.propTypes = {
-    headerContent: PropTypes.string,
-};
+class App extends Component {
+    constructor(props) {
+        super(props);
 
-App.defaultProps = {
-    headerContent: 'Hello',
-};
+        this.state = {
+            isConfigLoaded: false,
+        };
+    }
+
+    async componentDidMount() {
+        await loadConfig();
+
+        this.setState(prevState => ({ ...prevState, isConfigLoaded: true }));
+    }
+
+    render() {
+        const { isConfigLoaded } = this.state;
+
+        return isConfigLoaded ? <Loaded /> : <Loading />;
+    }
+}
 
 export default App;
