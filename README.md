@@ -1,5 +1,18 @@
-# react-boilerplate
-React boilerplate - dockerised, linted and ready to test
+# react-forecast
+
+## Goals
+
+- Allow the user to search for a city
+- Render the 5 days weather forecast for that given city displaying:
+    - Weather icon
+    - Min/max temperature
+    - Humidity
+- Good test coverage
+- Readme
+- Dockerise your application
+- Auto-complete city search
+- Search history?
+- Optimise bundle
 
 ## Technologies
 
@@ -25,16 +38,7 @@ The production docker image serves the app with nginx running on alpine linux.
 
 ## To do list:
 
-- ~~React setup~~
-- ~~Styles setup - modules?~~
-- Config setup
-- ~~Test setup~~
-- ~~Dockerise~~
-- ~~Linting~~
-- Prettier setup
+- Config setup - GET request
 - Webpack optimisation
-- ~~Pre-commit/push hooks~~
-- Group non-application files together - internals dir etc.
-- Storybook?!
-- Coveralls
-- Spruce up readme
+- Business functionality
+- Readme love
