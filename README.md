@@ -11,6 +11,8 @@
 - Readme
 - Dockerise your application
 - Auto-complete city search
+- Search history?
+- Optimise bundle
 
 ## Technologies
 
