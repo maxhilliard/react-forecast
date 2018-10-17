@@ -30,15 +30,22 @@
 
 ## Production Build
 
+The production docker image serves the app with nginx running on alpine linux.
+
 To only bundle the project: `yarn build`
 
 To bundle *and* dockerise the project: `yarn build-docker-img [YOUR_IMAGE_NAME]`
 
-The production docker image serves the app with nginx running on alpine linux.
+*N.B. - if param [YOUR_IMAGE_NAME] is not passed, image will be named react-forecast-img by default*
+
+To run the container, _a config file_ `config.json` _must be mounted_ to `/usr/share/nginx/html/config/config.json`
+
+An example run command would serve the app on port 80 and mount the development config for testing purposes:
+
+`docker run -d -p 80:80 -v $(pwd)/src/config/config.json:/usr/share/nginx/html/config/config.json --name [YOUR_CONTAINER_NAME] [YOUR_IMAGE_NAME]`
 
 ## To do list:
 
-- Config setup - GET request
 - Webpack optimisation
 - Business functionality
 - Readme love
