@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import ForecastTile from './forecast-tile/ForecastTile';
 
+import styles from './Forecast.css';
+
 const selectRelevantForecastKeys = ({
     dt,
     humidity,
@@ -15,11 +17,16 @@ const selectRelevantForecastKeys = ({
     weather,
 });
 
-const Forecast = ({ forecast: fiveDayForecast }) => fiveDayForecast.map((allForecastDataForDay) => {
-    const forecastTileProps = selectRelevantForecastKeys(allForecastDataForDay);
-
-    return <ForecastTile key={`forecast-${forecastTileProps.dt}`} {...forecastTileProps} />;
-});
+const Forecast = ({ forecast: fiveDayForecast }) => (
+    <div className={styles.forecastContainer}>
+        {
+            fiveDayForecast.map((allForecastDataForDay) => {
+                const forecastTileProps = selectRelevantForecastKeys(allForecastDataForDay);
+                return <ForecastTile key={`forecast-${forecastTileProps.dt}`} {...forecastTileProps} />;
+            })
+        }
+    </div>
+);
 
 Forecast.propTypes = {
     forecastArr: PropTypes.array,

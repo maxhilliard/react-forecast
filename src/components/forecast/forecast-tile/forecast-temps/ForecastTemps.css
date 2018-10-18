@@ -1,0 +1,3 @@
+.forecastTemps {
+    composes: forecastTemps from '../ForecastTile.css';
+}

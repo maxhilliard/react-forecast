@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const postCssValuesPlugin = require('postcss-icss-values');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: './src/index.html',
 });
@@ -41,6 +43,11 @@ module.exports = {
                         },
                     }, {
                         loader: 'postcss-loader',
+                        options: {
+                            plugins: () => [
+                                postCssValuesPlugin,
+                            ],
+                        },
                     },
                 ],
             },

@@ -1,0 +1,8 @@
+.forecastContainer {
+    composes: forecastContainer from '../App.css';
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5, 1fr);
+    align-content: center;
+}

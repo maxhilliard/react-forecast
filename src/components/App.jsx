@@ -5,10 +5,13 @@ import { loadConfig } from '../config';
 import Search from './search/Search';
 import Forecast from './forecast/Forecast';
 
+// TODO - use react-css-loader
+import styles from './App.css';
+
 const Loading = () => (
-    <h1>
+    <p>
         Loading
-    </h1>
+    </p>
 );
 
 class App extends Component {
@@ -42,9 +45,9 @@ class App extends Component {
         if (!isConfigLoaded) return <Loading />;
 
         return (
-            <div>
-                <Search handleForecastResponse={this.handleForecastResponse} />
+            <div className={styles.container}>
                 <Forecast forecast={forecast} />
+                <Search handleForecastResponse={this.handleForecastResponse} />
             </div>
         );
     }

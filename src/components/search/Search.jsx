@@ -6,6 +6,8 @@ import SearchButton from './search-button/SearchButton';
 
 import { getForecast } from '../../services/forecast/forecastService';
 
+import styles from './Search.css';
+
 class Search extends Component {
     constructor(props) {
         super(props);
@@ -40,7 +42,7 @@ class Search extends Component {
         const { searchValue } = this.state;
 
         return (
-            <div>
+            <div className={styles.searchContainer}>
                 <SearchInput handleInputChange={this.handleInputChange} value={searchValue} />
                 <SearchButton handleSubmit={this.handleSubmit} />
             </div>

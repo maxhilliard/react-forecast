@@ -6,7 +6,7 @@ export const constructForecastReqUrl = (searchTerm = 'London', daysCount) => {
 
     if (!apiBaseUrl || !apiKey) throw new Error('Missing weather api config');
 
-    return `${apiBaseUrl}?APPID=${apiKey}&mode=json&q=${searchTerm}&cnt=${daysCount}`;
+    return `${apiBaseUrl}?APPID=${apiKey}&mode=json&q=${searchTerm}&cnt=${daysCount}&units=metric`;
 };
 
 export const getForecast = (searchTerm, daysCount = 5) => {

@@ -1,0 +1,3 @@
+.forecastHumidity {
+    composes: forecastHumidity from '../ForecastTile.css';
+}
