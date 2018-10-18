@@ -1,4 +1,4 @@
-describe('api-service', () => {
+describe('apiService', () => {
     describe('parameter handling', () => {
         it('should throw the expected error if no url param is passed', () => {
 

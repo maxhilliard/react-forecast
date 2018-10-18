@@ -8,4 +8,10 @@ describe('The app component', () => {
         const tree = renderer.create(<App />).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    describe('config loading', () => {
+        it('should make GET request for config', () => {
+
+        });
+    });
 });
