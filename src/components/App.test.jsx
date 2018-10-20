@@ -1,17 +1,15 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 import App from './App';
 
 describe('The app component', () => {
     it('should match snapshot', () => {
-        const tree = renderer.create(<App />).toJSON();
-        expect(tree).toMatchSnapshot();
-    });
+        const componentShallow = shallow(<App />);
+        componentShallow.setState({ isConfigLoaded: true });
 
-    describe('config loading', () => {
-        it('should make GET request for config', () => {
+        console.log('🍕: componentShallow.debug()', componentShallow.debug());
 
-        });
+        expect(componentShallow).toMatchSnapshot();
     });
 });

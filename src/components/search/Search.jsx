@@ -34,7 +34,7 @@ class Search extends Component {
         const { handleForecastResponse } = this.props;
 
         const { list: forecast } = await getForecast(searchValue);
-        
+
         handleForecastResponse(forecast);
     }
 
@@ -44,7 +44,7 @@ class Search extends Component {
         return (
             <div className={styles.searchContainer}>
                 <SearchInput handleInputChange={this.handleInputChange} value={searchValue} />
-                <SearchButton handleSubmit={this.handleSubmit} />
+                <SearchButton isDisabled={!searchValue.length} handleSubmit={this.handleSubmit} />
             </div>
         );
     }

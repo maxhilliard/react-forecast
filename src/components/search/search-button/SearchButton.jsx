@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchButton = ({ buttonText, handleSubmit }) => (
-    <button type="button" onClick={handleSubmit}>
+import styles from './searchButton.css';
+
+const SearchButton = ({ buttonText, handleSubmit, isDisabled }) => (
+    <button disabled={isDisabled} className={styles.searchButton} type="button" onClick={handleSubmit}>
         {buttonText}
     </button>
 );
@@ -10,6 +12,7 @@ const SearchButton = ({ buttonText, handleSubmit }) => (
 SearchButton.propTypes = {
     buttonText: PropTypes.string,
     handleSubmit: PropTypes.func.isRequired,
+    isDisabled: PropTypes.bool.isRequired,
 };
 
 SearchButton.defaultProps = {

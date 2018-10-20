@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './SearchInput.css';
+
 const SearchInput = ({ value, placeholder, handleInputChange }) => (
     <input
         placeholder={placeholder}
@@ -8,6 +10,7 @@ const SearchInput = ({ value, placeholder, handleInputChange }) => (
         name="search"
         value={value}
         onChange={handleInputChange}
+        className={styles.searchInput}
     />
 );
 
@@ -19,7 +22,7 @@ SearchInput.propTypes = {
 
 SearchInput.defaultProps = {
     value: '',
-    placeholder: 'Search',
+    placeholder: 'Enter location',
 };
 
 export default SearchInput;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search snapshot should match snapshot 1`] = `
+<div
+  className="searchContainer"
+>
+  <SearchInput
+    handleInputChange={[Function]}
+    placeholder="Enter location"
+    value=""
+  />
+  <SearchButton
+    buttonText="Search"
+    handleSubmit={[Function]}
+    isDisabled={true}
+  />
+</div>
+`;
