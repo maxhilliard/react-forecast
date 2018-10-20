@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forecast snapshot should match snapshot 1`] = `
+<div
+  className="forecastContainer"
+>
+  <ForecastTile
+    dt="mock-dt"
+    humidity="mock-humidity"
+    key="forecast-mock-dt"
+    temp="mock-temp"
+    weather="mock-weather"
+  />
+  <ForecastTile
+    dt="mock-dt"
+    humidity="mock-humidity"
+    key="forecast-mock-dt"
+    temp="mock-temp"
+    weather="mock-weather"
+  />
+</div>
+`;

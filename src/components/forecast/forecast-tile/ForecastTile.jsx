@@ -30,4 +30,6 @@ const ForecastTile = ({
     );
 };
 
+// TODO - handle proptypes
+
 export default ForecastTile;

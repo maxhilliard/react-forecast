@@ -37,6 +37,7 @@
     "globals": {
         "describe": true,
         "it": true,
-        "expect": true
+        "expect": true,
+        "scope": true
     }
 }

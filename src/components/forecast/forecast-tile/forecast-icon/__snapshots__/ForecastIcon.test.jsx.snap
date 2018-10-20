@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastIcon snapshot matches snapshot 1`] = `
+<div
+  className="forecastIcon"
+>
+  <img
+    alt="mock-weather-description"
+    src="http://openweathermap.org/img/w/mock-icon-code.png"
+  />
+</div>
+`;

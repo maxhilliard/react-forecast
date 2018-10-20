@@ -5,11 +5,9 @@ import App from './App';
 
 describe('The app component', () => {
     it('should match snapshot', () => {
-        const componentShallow = shallow(<App />);
-        componentShallow.setState({ isConfigLoaded: true });
+        const wrapper = shallow(<App />);
+        wrapper.setState({ isConfigLoaded: true });
 
-        console.log('🍕: componentShallow.debug()', componentShallow.debug());
-
-        expect(componentShallow).toMatchSnapshot();
+        expect(wrapper).toMatchSnapshot();
     });
 });

@@ -1,13 +1,14 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+
+import ForecastDay from './ForecastDay';
+
 describe('ForecastDay', () => {
     describe('snapshot', () => {
-        it('matches snapshot', () => {
+        it('should match snapshot', () => {
+            const wrapper = shallow(<ForecastDay day="mock-day" />);
 
-        });
-    });
-
-    describe('props', () => {
-        it('renders the day prop as expected', () => {
-
+            expect(wrapper).toMatchSnapshot();
         });
     });
 });

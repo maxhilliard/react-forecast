@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './searchButton.css';
+import styles from './SearchButton.css';
 
 const SearchButton = ({ buttonText, handleSubmit, isDisabled }) => (
     <button disabled={isDisabled} className={styles.searchButton} type="button" onClick={handleSubmit}>

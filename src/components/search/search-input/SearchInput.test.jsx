@@ -1,23 +1,27 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+import SearchInput from './SearchInput';
+
 describe('SearchInput', () => {
     describe('snapshot', () => {
         it('should match snapshot', () => {
-
+            const wrapper = shallow(<SearchInput handleInputChange={() => {}} />);
+            expect(wrapper).toMatchSnapshot();
         });
     });
 
     describe('props', () => {
-        it('should render the value prop as expected', () => {
+        it('should invoke handleInputChange prop on keypress', () => {
+            const handleInputChangeSpy = jest.fn();
+            const wrapper = shallow(<SearchInput handleInputChange={handleInputChangeSpy} />);
 
-        });
+            const mockKeypressEvent = {
+                target: { value: 'the-value' },
+            };
 
-        it('should render the placeholder prop as expected', () => {
+            wrapper.find('input').simulate('change', mockKeypressEvent);
 
-        });
-    });
-
-    describe('event handling', () => {
-        it('should invoke handleInputChange function onChange', () => {
-
+            expect(handleInputChangeSpy).toHaveBeenLastCalledWith(mockKeypressEvent);
         });
     });
 });

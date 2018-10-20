@@ -33,9 +33,14 @@ class Search extends Component {
         const { searchValue } = this.state;
         const { handleForecastResponse } = this.props;
 
-        const { list: forecast } = await getForecast(searchValue);
+        try {
+            const { list: forecast } = await getForecast(searchValue);
 
-        handleForecastResponse(forecast);
+            handleForecastResponse(forecast);
+        } catch (err) {
+            // TODO: Handle error
+            console.error(err);
+        }
     }
 
     render() {
