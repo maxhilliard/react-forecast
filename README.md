@@ -1,18 +1,15 @@
 # react-forecast
 
 ## Goals
-
 - Allow the user to search for a city
 - Render the 5 days weather forecast for that given city displaying:
     - Weather icon
     - Min/max temperature
     - Humidity
 - Good test coverage
-- Readme
 - Dockerise your application
 - Auto-complete city search
 - Search history?
-- Optimise bundle
 
 ## Technologies
 Cloned from my own [React Boilerplate](https://github.com/maxhilliard/react-boilerplate)
@@ -26,8 +23,11 @@ Cloned from my own [React Boilerplate](https://github.com/maxhilliard/react-boil
 `docker`
 
 ## Development
+clone this repo `git clone https://github.com/maxhilliard/react-forecast.git`
 
-`yarn start` - starts webpack dev server, hot module replacement is enabled.
+Install dependencies: `yarn install`
+
+Start webpack dev server: `yarn start`
 
 Navigate to [localhost:9000](http://localhost:9000)
 
