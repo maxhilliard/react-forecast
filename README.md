@@ -51,6 +51,9 @@ Navigate to [localhost:80](http://localhost:80)
 
 *N.B. For the above to work, add a valid API key to ./src/config/config.json*
 
+## Testing
+To run tests: `yarn test`
+
 ## Improvements
 
 - Search History - would potentially merit Redux
