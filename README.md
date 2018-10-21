@@ -15,8 +15,9 @@
 - Optimise bundle
 
 ## Technologies
+Cloned from my own [React Boilerplate](https://github.com/maxhilliard/react-boilerplate)
 
-`React 16` `webpack 4` `eslint` `jest` `enzyme` `CSS modules` `postCSS`
+`React 16` `webpack 4` `eslint` `jest` `enzyme` `CSS modules` `postCSS` `Docker`
 
 ## Dependencies
 
@@ -27,6 +28,8 @@
 ## Development
 
 `yarn start` - starts webpack dev server, hot module replacement is enabled.
+
+Navigate to [localhost:9000](http://localhost:9000)
 
 ## Production Build
 
@@ -42,10 +45,16 @@ To run the container, _a config file_ `config.json` _must be mounted_ to `/usr/s
 
 An example run command would serve the app on port 80 and mount the development config for testing purposes:
 
-`docker run -d -p 80:80 -v $(pwd)/src/config/config.json:/usr/share/nginx/html/config/config.json --name [YOUR_CONTAINER_NAME] [YOUR_IMAGE_NAME]`
+`docker run -d -p 80:80 -v $(pwd)/src/config/config.json:/usr/share/nginx/html/config/config.json --name [YOUR_CONTAINER_NAME] [YOUR_IMAGE_NAME]
 
-## To do list:
+Navigate to [localhost:80](http://localhost:80)
 
-- Webpack optimisation
-- Business functionality
-- Readme love
+*N.B. For the above to work, add a valid API key to ./src/config/config.json*
+
+## Improvements
+
+- Search History - would potentially merit Redux
+- Autocomplete search
+- Enum for errors
+- Implement react css loader
+- Bundle optimization
