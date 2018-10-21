@@ -1,7 +1,7 @@
 import apiFetch from '../api/apiService';
 import { selectValuesFromConfig } from '../../config';
 
-export const constructForecastReqUrl = (searchTerm = 'London', daysCount) => {
+export const constructForecastReqUrl = (searchTerm = 'London', daysCount = 5) => {
     const { apiBaseUrl, apiKey } = selectValuesFromConfig(['apiBaseUrl', 'apiKey']);
 
     if (!apiBaseUrl || !apiKey) throw new Error('Missing weather api config');

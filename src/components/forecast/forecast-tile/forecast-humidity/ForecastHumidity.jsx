@@ -5,6 +5,7 @@ import styles from '../ForecastTile.css';
 
 const ForecastHumidity = ({ humidity }) => (
     <p className={styles.forecastHumidity}>
+        Humidity:
         {humidity}
         %
     </p>

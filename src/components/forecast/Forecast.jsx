@@ -29,11 +29,11 @@ const Forecast = ({ forecast: fiveDayForecast }) => (
 );
 
 Forecast.propTypes = {
-    forecastArr: PropTypes.array,
+    forecast: PropTypes.array, // eslint-disable-line
 };
 
 Forecast.defaultProps = {
-    forecastArr: [],
+    forecast: [],
 };
 
 export default Forecast;

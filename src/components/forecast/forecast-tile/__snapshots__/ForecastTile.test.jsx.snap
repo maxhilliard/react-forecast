@@ -7,13 +7,7 @@ exports[`ForecastTile snapshot should match snapshot 1`] = `
   <ForecastDay
     day="Sun"
   />
-  <ForecastIcon
-    weather={
-      Array [
-        "mock-weather",
-      ]
-    }
-  />
+  <ForecastIcon />
   <ForecastTemps
     temp={
       Object {

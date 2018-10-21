@@ -19,17 +19,23 @@ const ForecastTile = ({
     weather,
 }) => {
     const day = parseDayFromUnixTimestamp(dt);
+    const { icon, description } = weather[0];
 
     return (
         <div className={styles.forecastTile}>
             <ForecastDay day={day} />
-            <ForecastIcon weather={weather} />
+            <ForecastIcon icon={icon} description={description} />
             <ForecastTemps temp={temp} />
             <ForecastHumidity humidity={humidity} />
         </div>
     );
 };
 
-// TODO - handle proptypes
+ForecastTile.propTypes = {
+    dt: PropTypes.number.isRequired,
+    humidity: PropTypes.number.isRequired,
+    temp: PropTypes.objectOf(PropTypes.number).isRequired,
+    weather: PropTypes.object.isRequired, // eslint-disable-line
+};
 
 export default ForecastTile;

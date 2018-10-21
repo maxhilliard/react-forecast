@@ -1,3 +1,4 @@
 .forecastHumidity {
+    font-size: 12px;
     composes: forecastHumidity from '../ForecastTile.css';
 }

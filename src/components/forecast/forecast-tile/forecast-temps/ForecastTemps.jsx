@@ -20,4 +20,11 @@ const ForecastTemps = ({ temp }) => {
     );
 };
 
+ForecastTemps.propTypes = {
+    temp: PropTypes.shape({
+        min: PropTypes.number,
+        max: PropTypes.number,
+    }).isRequired,
+};
+
 export default ForecastTemps;

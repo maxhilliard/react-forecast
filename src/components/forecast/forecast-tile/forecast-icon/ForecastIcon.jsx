@@ -5,9 +5,8 @@ import styles from './ForecastIcon.css';
 
 const constructIconUrl = iconCode => `http://openweathermap.org/img/w/${iconCode}.png`;
 
-const ForecastIcon = ({ weather }) => {
-    const { icon: iconCode, description } = weather[0];
-    const iconUrl = constructIconUrl(iconCode);
+const ForecastIcon = ({ icon, description }) => {
+    const iconUrl = constructIconUrl(icon);
 
     return (
         <div className={styles.forecastIcon}>
@@ -17,7 +16,8 @@ const ForecastIcon = ({ weather }) => {
 };
 
 ForecastIcon.propTypes = {
-    weather: PropTypes.array,
+    icon: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
 };
 
 export default ForecastIcon;
