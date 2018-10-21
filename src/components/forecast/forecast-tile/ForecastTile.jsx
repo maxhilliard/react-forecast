@@ -35,7 +35,7 @@ ForecastTile.propTypes = {
     dt: PropTypes.number.isRequired,
     humidity: PropTypes.number.isRequired,
     temp: PropTypes.objectOf(PropTypes.number).isRequired,
-    weather: PropTypes.object.isRequired, // eslint-disable-line
+    weather: PropTypes.array.isRequired, // eslint-disable-line
 };
 
 export default ForecastTile;
