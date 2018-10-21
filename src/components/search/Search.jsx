@@ -31,15 +31,13 @@ class Search extends Component {
 
     async handleSubmit() {
         const { searchValue } = this.state;
-        const { handleForecastResponse } = this.props;
+        const { handleForecastResponse, handleErrorResponse } = this.props;
 
         try {
             const { list: forecast } = await getForecast(searchValue);
-
             handleForecastResponse(forecast);
         } catch (err) {
-            // TODO: Handle error
-            console.error(err);
+            handleErrorResponse();
         }
     }
 

@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 
 import Forecast from './Forecast';
 import ForecastTile from './forecast-tile/ForecastTile';
+import ForecastText from './forecast-text/ForecastText';
 
 describe('Forecast', () => {
     const mockForecast = [
@@ -30,10 +31,26 @@ describe('Forecast', () => {
 
     describe('props', () => {
         it('should render a ForecastTile component for each item in the forecast array prop', () => {
-            const forecastTileNumber = wrapper.find(ForecastTile).length;
-            const expectedForecastTileNumber = mockForecast.length;
+            const forecastTileCount = wrapper.find(ForecastTile).length;
+            const expectedForecastTileCount = mockForecast.length;
 
-            expect(forecastTileNumber).toEqual(expectedForecastTileNumber);
+            expect(forecastTileCount).toEqual(expectedForecastTileCount);
+        });
+
+        it('should render a ForecastText component if there is no forecast', () => {
+            wrapper.setProps({ forecast: [] });
+            const forecastTextCount = wrapper.find(ForecastText).length;
+            const expectedForecastTextCount = 1;
+
+            expect(forecastTextCount).toEqual(expectedForecastTextCount);
+        });
+
+        it('should render a ForecastText component if isForecastError prop is truthy', () => {
+            wrapper.setProps({ isForecastError: true });
+            const forecastTextCount = wrapper.find(ForecastText).length;
+            const expectedForecastTextCount = 1;
+
+            expect(forecastTextCount).toEqual(expectedForecastTextCount);
         });
     });
 });

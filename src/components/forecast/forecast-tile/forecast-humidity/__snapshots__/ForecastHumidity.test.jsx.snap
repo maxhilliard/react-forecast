@@ -4,6 +4,7 @@ exports[`ForecastHumidity snapshot should match snapshot 1`] = `
 <p
   className="forecastHumidity"
 >
+  Humidity:
   54
   %
 </p>

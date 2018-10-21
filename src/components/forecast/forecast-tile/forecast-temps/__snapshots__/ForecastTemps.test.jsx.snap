@@ -4,11 +4,15 @@ exports[`ForecastTemps snapshot should match snapshot 1`] = `
 <div
   className="forecastTemps"
 >
-  <p>
-    min: 12°C
+  <p
+    className="textElem"
+  >
+    Min: 12°C
   </p>
-  <p>
-    max: 21°C
+  <p
+    className="textElem"
+  >
+    Max: 21°C
   </p>
 </div>
 `;
