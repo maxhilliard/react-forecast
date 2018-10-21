@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastHumidity snapshot should match snapshot 1`] = `
+<p
+  className="forecastHumidity"
+>
+  54
+  %
+</p>
+`;

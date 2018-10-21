@@ -1,0 +1,6 @@
+.forecastIcon {
+    composes: forecastIcon from '../ForecastTile.css';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

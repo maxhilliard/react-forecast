@@ -1,22 +1,17 @@
 import React, { Component } from 'react';
 
-import getConfig from '../config';
+import { loadConfig } from '../config';
 
-const loadConfig = async () => {
-    const config = await getConfig();
+import Search from './search/Search';
+import Forecast from './forecast/Forecast';
 
-    window.config = config;
-};
+// TODO - use react-css-loader
+import styles from './App.css';
 
-const Loaded = () => (
-    <h1>
-        Hello World
-    </h1>
-);
 const Loading = () => (
-    <h1>
+    <p>
         Loading
-    </h1>
+    </p>
 );
 
 class App extends Component {
@@ -25,7 +20,10 @@ class App extends Component {
 
         this.state = {
             isConfigLoaded: false,
+            forecast: [],
         };
+
+        this.handleForecastResponse = this.handleForecastResponse.bind(this);
     }
 
     async componentDidMount() {
@@ -34,10 +32,24 @@ class App extends Component {
         this.setState(prevState => ({ ...prevState, isConfigLoaded: true }));
     }
 
-    render() {
-        const { isConfigLoaded } = this.state;
+    handleForecastResponse(forecast) {
+        this.setState(prevState => ({
+            ...prevState,
+            forecast,
+        }));
+    }
 
-        return isConfigLoaded ? <Loaded /> : <Loading />;
+    render() {
+        const { isConfigLoaded, forecast } = this.state;
+
+        if (!isConfigLoaded) return <Loading />;
+
+        return (
+            <div className={styles.container}>
+                <Forecast forecast={forecast} />
+                <Search handleForecastResponse={this.handleForecastResponse} />
+            </div>
+        );
     }
 }
 

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+
+    background-color: black;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "forecast search"
+};
+
+.forecastContainer {
+    grid-area: forecast;
+}
+
+.searchContainer {
+    grid-area: search;
+}

@@ -1,0 +1,24 @@
+.forecastTile {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "forecastDay forecastIcon forecastTemps"
+        "forecastDay forecastIcon forecastHumidity";
+}
+
+.forecastDay {
+    grid-area: forecastDay;
+}
+
+.forecastIcon {
+    grid-area: forecastIcon;
+}
+
+.forecastTemps {
+    grid-area: forecastTemps;
+}
+
+.forecastHumidity {
+    grid-area: forecastHumidity;
+}

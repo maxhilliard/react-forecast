@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`The app component should match snapshot 1`] = `
-<h1>
-  Loading
-</h1>
+<div
+  className="container"
+>
+  <Forecast
+    forecast={Array []}
+    forecastArr={Array []}
+  />
+  <Search
+    handleForecastResponse={[Function]}
+  />
+</div>
 `;

@@ -10,7 +10,7 @@ export default async (url, opts = {}) => {
         const responseStream = await fetch(url, { ...defaultFetchOpts, ...opts });
         const contentType = responseStream.headers.get('Content-Type');
 
-        return /json/ig.test(contentType) ? responseStream.json() : responseStream.text();
+        return /json/ig.test(contentType) ? responseStream.json() : responseStream.blob();
     } catch (err) {
         // TODO: Errors enum
         throw new Error(err);

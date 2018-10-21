@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastTile snapshot should match snapshot 1`] = `
+<div
+  className="forecastTile"
+>
+  <ForecastDay
+    day="Sun"
+  />
+  <ForecastIcon />
+  <ForecastTemps
+    temp={
+      Object {
+        "max": 23,
+        "min": 12,
+      }
+    }
+  />
+  <ForecastHumidity
+    humidity={70}
+  />
+</div>
+`;

@@ -1,11 +1,13 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
 
 import App from './App';
 
 describe('The app component', () => {
     it('should match snapshot', () => {
-        const tree = renderer.create(<App />).toJSON();
-        expect(tree).toMatchSnapshot();
+        const wrapper = shallow(<App />);
+        wrapper.setState({ isConfigLoaded: true });
+
+        expect(wrapper).toMatchSnapshot();
     });
 });
