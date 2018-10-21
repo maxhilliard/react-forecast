@@ -1,4 +1,6 @@
 .forecastHumidity {
     font-size: 12px;
     composes: forecastHumidity from '../ForecastTile.css';
+    margin: 0;
+    text-align: left;
 }

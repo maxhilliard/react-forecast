@@ -1,5 +1,10 @@
 .forecastTemps {
     composes: forecastTemps from '../ForecastTile.css';
     font-size: 12px;
+    margin: 0;
+}
+
+.textElem {
+    margin: 0;
     text-align: left;
 }

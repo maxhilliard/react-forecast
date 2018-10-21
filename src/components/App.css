@@ -10,7 +10,7 @@
 .container {
     width: 100vw;
     height: 100vh;
-    padding: 40px;
+    padding: 5px;
     box-sizing: border-box;
 
     background-color: black;
@@ -35,6 +35,7 @@
 
 @media (min-width: screen-sm) {
     .container {
+        padding: 40px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas:

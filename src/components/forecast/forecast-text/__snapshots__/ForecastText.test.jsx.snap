@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ForecastText snapshot should match snapshot 1`] = `
+<div
+  className="forecastText"
+>
+  <h2>
+    Search for a city
+  </h2>
+</div>
+`;

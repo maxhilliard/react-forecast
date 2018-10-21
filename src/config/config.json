@@ -1,6 +1,6 @@
 {
     "weatherApi": {
         "apiBaseUrl": "http://api.openweathermap.org/data/2.5/forecast/daily",
-        "apiKey": "REPLACE_ME"
+        "apiKey": "3af87d3b4ae9bf957e5ea4a1797b6466"
     }
 }

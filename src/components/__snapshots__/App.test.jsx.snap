@@ -6,9 +6,10 @@ exports[`The app component should match snapshot 1`] = `
 >
   <Forecast
     forecast={Array []}
-    forecastArr={Array []}
+    isForecastError={false}
   />
   <Search
+    handleErrorResponse={[Function]}
     handleForecastResponse={[Function]}
   />
 </div>

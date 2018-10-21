@@ -20,10 +20,12 @@ class App extends Component {
 
         this.state = {
             isConfigLoaded: false,
+            isForecastError: false,
             forecast: [],
         };
 
         this.handleForecastResponse = this.handleForecastResponse.bind(this);
+        this.handleErrorResponse = this.handleErrorResponse.bind(this);
     }
 
     async componentDidMount() {
@@ -36,18 +38,29 @@ class App extends Component {
         this.setState(prevState => ({
             ...prevState,
             forecast,
+            isForecastError: false,
+        }));
+    }
+
+    handleErrorResponse() {
+        this.setState(prevState => ({
+            ...prevState,
+            isForecastError: true,
         }));
     }
 
     render() {
-        const { isConfigLoaded, forecast } = this.state;
+        const { isConfigLoaded, forecast, isForecastError } = this.state;
 
         if (!isConfigLoaded) return <Loading />;
 
         return (
             <div className={styles.container}>
-                <Forecast forecast={forecast} />
-                <Search handleForecastResponse={this.handleForecastResponse} />
+                <Forecast isForecastError={isForecastError} forecast={forecast} />
+                <Search
+                    handleErrorResponse={this.handleErrorResponse}
+                    handleForecastResponse={this.handleForecastResponse}
+                />
             </div>
         );
     }

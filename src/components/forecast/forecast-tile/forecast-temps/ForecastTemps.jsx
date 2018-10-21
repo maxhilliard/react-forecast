@@ -10,11 +10,11 @@ const ForecastTemps = ({ temp }) => {
 
     return (
         <div className={styles.forecastTemps}>
-            <p>
-                {`min: ${minTemp}${tempUnit}`}
+            <p className={styles.textElem}>
+                {`Min: ${minTemp}${tempUnit}`}
             </p>
-            <p>
-                {`max: ${maxTemp}${tempUnit}`}
+            <p className={styles.textElem}>
+                {`Max: ${maxTemp}${tempUnit}`}
             </p>
         </div>
     );

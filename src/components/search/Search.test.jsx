@@ -6,7 +6,12 @@ import Search from './Search';
 import SearchButton from './search-button/SearchButton';
 
 describe('Search', () => {
-    const wrapper = shallow(<Search handleForecastResponse={() => {}} />);
+    const wrapper = shallow(
+        <Search
+            handleErrorResponse={() => {}}
+            handleForecastResponse={() => {}}
+        />,
+    );
 
     beforeEach(() => {
         wrapper.setState({ searchValue: '' });
@@ -53,9 +58,10 @@ describe('Search', () => {
 
         it('should invoke handleForecastResponse prop upon GET forecast', async () => {
             const handleForecastResponseSpy = jest.fn();
-            const wrapper = shallow(
-                <Search handleForecastResponse={handleForecastResponseSpy} />,
-            );
+
+            wrapper.setProps({
+                handleForecastResponse: handleForecastResponseSpy,
+            });
 
             const mockForecast = ['mock-forecast'];
 
@@ -85,6 +91,28 @@ describe('Search', () => {
             const isSearchButtonDisabled = searchButtonProps.isDisabled;
 
             expect(isSearchButtonDisabled).toBe(true);
+        });
+
+        it('should invoke handleErrorResponse prop if there is an error from API', async () => {
+            const handleErrorResponseSpy = jest.fn();
+
+            wrapper.setState({
+                searchValue: 'error-invoking-value',
+            });
+
+            wrapper.setProps({
+                handleErrorResponse: handleErrorResponseSpy,
+                handleForecastResponse: () => {},
+            });
+
+            nock('http://api.openweathermap.org:80', { encodedQueryParams: true })
+                .get('/data/2.5/forecast/daily')
+                .query(() => true)
+                .reply(404);
+
+            await wrapper.instance().handleSubmit();
+
+            expect(handleErrorResponseSpy).toHaveBeenCalled();
         });
     });
 });

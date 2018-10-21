@@ -2,7 +2,7 @@
 
 exports[`Forecast snapshot should match snapshot 1`] = `
 <div
-  className="forecastContainer"
+  className="forecastContainer "
 >
   <ForecastTile
     dt="mock-dt"
